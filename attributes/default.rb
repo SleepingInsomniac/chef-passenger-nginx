@@ -1,5 +1,5 @@
 # Ruby & RVM
-default['passenger-nginx']['ruby_version'] = "2.3.3"
+default['passenger-nginx']['ruby_version'] = "2.4.1"
 default['passenger-nginx']['rvm']['rvm_shell'] = '/etc/profile.d/rvm.sh'
 
 # Nginx
@@ -10,10 +10,10 @@ default['passenger-nginx']['nginx']['worker_rlimit_nofile'] = 4096
 default['passenger-nginx']['nginx']['user'] = 'www-data'
 default['passenger-nginx']['nginx']['access_log'] = 'logs/access.log'
 default['passenger-nginx']['nginx']['error_log'] = 'logs/error.log'
-default['passenger-nginx']['nginx']['http2'] = false
+default['passenger-nginx']['nginx']['http2'] = true
 
 # Passenger
-default['passenger-nginx']['passenger']['version'] = '4.1.1'
+default['passenger-nginx']['passenger']['version'] = '5.1.2'
 default['passenger-nginx']['passenger']['max_pool_size'] = 15
 default['passenger-nginx']['passenger']['min_instances'] = 1
 default['passenger-nginx']['passenger']['pool_idle_time'] = 300
